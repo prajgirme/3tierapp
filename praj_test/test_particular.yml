@@ -1,0 +1,11 @@
+- name: index.html on app 1
+  hosts: apps
+  gather_facts: false
+  become: true
+
+  tasks:
+  - name: copy praj file
+    template:
+      src: myfile_praj
+      dest: /home/ec2-user/.
+    when: ('app1' in group_names) 
