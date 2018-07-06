@@ -31,7 +31,7 @@
 
 - name: deploy postgres
   hosts: appdbs
-  gather_facts: false
+  gather_facts: true
   become: true
   roles:
   - config

@@ -1,8 +1,4 @@
 ---
-- name: http
-  package:
-    name: httpie
-    state: latest
 - name: install HAProxy
   yum:
     name: haproxy
